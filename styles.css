@@ -1,0 +1,213 @@
+:root {
+    --cor-de-fundo: #00030C;
+    --texto-cor-principal: #FFFFFF;
+    --texto-cor-secundaria: #C0C0C0;
+    --cor-botão: #167BF7;
+    --fonte-texto: 'Inter', sans-serif;
+    --cor-efeito: #549cf4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    background-color: var(--cor-de-fundo);
+    color: var(--texto-cor-principal);
+    font-weight: 400;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+}
+
+.principal {
+    background-image: url(img/Background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    align-items: center;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em;
+}
+
+.container__botao {
+    display: block;
+    background-color: var(--cor-botão);
+    border-radius: 8px;
+    color: var(--texto-cor-principal);
+    text-decoration: none;
+    padding: 1em;
+    margin-bottom: 1em;
+    transition: transform 1s;
+}
+
+.botao__pseudo:hover, .secundario__botao:hover {
+    background-color: #549cf4;
+    transform: scale(1.1);
+}
+
+.botao__secundario {
+    background-color: transparent;
+    border: 1px solid var(--texto-cor-principal);
+}
+
+.botao__secundario:hover {
+    color: var(--cor-efeito);
+}
+
+.container__aviso {
+    color: var(--texto-cor-secundaria);
+    font-size: 12px;
+}
+
+/* CONTAINER SECUNDARIO */
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.container__descricao {
+    margin: 0 2em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.descricao__titulo {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--texto-cor-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--texto-cor-secundaria);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+/* DISPOSITIVOS */
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--texto-cor-principal);
+    margin-bottom: 1em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.dispositivos__lista__item {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--texto-cor-principal);
+}
+
+/* RODAPÉ */
+
+.rodape {
+    text-align: center;
+    margin: 8em 9em 5em 9em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    list-style-type: none;
+    margin-top: 2em;
+}
+
+.rodape__lista__item {
+    text-decoration: none;
+    color: var(--texto-cor-principal);
+}
+
+.rodape__lista__item:hover {
+    color: var(--cor-botão);
+}
+
+.rodape__texto {
+    font-size: 14px;
+    color: var(--texto-cor-secundaria);
+    margin: 1em 0;
+}
+
+@media screen and (max-width: 768px) {
+    /* PRINCIPAL */
+
+    .container {
+        display: block;
+        background-image: none;
+    }
+
+    .container__caixa {
+        margin: 1em;
+    }
+
+    .container__imagem {
+        width: 50vw;
+    }
+
+    /* SECUNDARIO */
+
+    .secundario {
+        margin: 0;
+        text-align: center;
+    }
+
+    .container__descricao {
+        margin: 0 1em;
+    }
+
+    .secundario__imagem {
+        width: 50vw;
+    }
+
+    /* DISPOSTIVO */
+
+    .dispositivos__lista {
+        display: block;
+    }
+
+    /* RODAPÉ */
+
+    .rodape {
+        margin: 8em 0 5em 0;
+    }
+
+    .rodape__lista {
+        display: block;
+    }
+
+}
